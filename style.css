@@ -1,0 +1,133 @@
+/* - Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%) */
+
+body{
+  background-color: hsl(204, 43%, 93%);
+  color:white;
+  display: flex;
+  flex-direction:column;
+  font-family: 'Karla' , sans-serif;
+  font-size:16px;
+  font-weight:400;
+  min-height:100vh;
+  justify-content: center;
+}
+main{
+  display:grid;
+  grid-template: repeat(3, 1fr) / auto;
+  padding: 2% 4%;
+}
+
+.card-section{
+  padding:2em;
+}
+/* Jumbotron styles */
+
+.jumbotron{
+  background-color: white;
+  border-top-left-radius: .5em;
+  border-top-right-radius:.5em;
+}
+.jumbotron h1{
+  color:hsl(179, 62%, 43%);
+  font-size: 2em;
+  font-weight:700;
+}
+
+.jumbotron h2{
+  color:hsl(71, 73%, 54%);
+  font-size: 1.5em;
+  margin: bottom 1.5em;
+}
+
+.jumbotron p{
+  color:hsl(218, 22%, 67%);
+  line-height:2;
+}
+
+/* Subscription overview styles */
+.sub-details{
+  background-color: hsl(179, 62%, 43%);
+}
+
+.sub-detials{
+  font-size:1.5em;
+}
+
+.price-callout{
+  display:flex;
+  align-items:center;
+  color:hsla(0, 0%, 100%, 0.842);
+}
+.price{
+  font-size:2em;
+  font-weight:700;
+  margin-right: .25em;
+  color:white;
+}
+
+.sub-details button{
+  background-color: hsl(71, 73%, 54%);
+  border-style:none;
+  border-radius:.5em;
+  box-shadow: 0 .5em .5em  hsl(179, 64%, 38%);
+  color:white;
+  font-weight:700;
+  font-size:1.1em;
+  padding:1em;
+  margin-top:2em;
+  width:100%;
+}
+
+/* Why us section Styles */
+.why-us{
+  background-color:#48bebd;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius:.5em;
+}
+.why-us h2{
+  margin-bottom:2em;
+}
+.why-us ul{
+  list-style:none;
+  padding:0;
+}
+.why-us li{
+  padding: .5em 0;
+}
+
+
+/* Footer styles */
+footer{
+  text-align:center;
+  color:hsl(179, 62%, 43%);
+}
+
+
+@media (min-width:768px) {
+  main{
+    display:grid;
+    grid-template: 45% 55% / repeat(2, 1fr);
+    grid-template-areas: 
+    "jumbo jumbo"
+    "sub why";
+    padding: 2% 15%;
+  }
+  .jumbotron{
+    grid-area: jumbo;
+    padding-top:3em;
+    padding-bottom:3em;
+  }
+
+  .sub-details{
+    grid-area:sub;
+    border-bottom-left-radius: .5em;
+  }
+
+  .why-us{
+    grid-area:why;
+    border-bottom-left-radius: 0;
+  }
+}
